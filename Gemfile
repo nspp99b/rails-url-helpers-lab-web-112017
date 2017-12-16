@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+gem 'rake', '< 11.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -23,13 +24,15 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-group :development, :test do
-  gem 'byebug'
+group :development do
   gem 'web-console', '~> 2.0'
+end
+
+group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'byebug'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'
 end
-
